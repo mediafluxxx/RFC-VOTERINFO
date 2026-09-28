@@ -1,0 +1,278 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary-50: 239 246 255;
+    --color-primary-100: 219 234 254;
+    --color-primary-200: 191 219 254;
+    --color-primary-300: 147 197 253;
+    --color-primary-400: 96 165 250;
+    --color-primary-500: 59 130 246;
+    --color-primary-600: 37 99 235;
+    --color-primary-700: 29 78 216;
+    --color-primary-800: 30 64 175;
+    --color-primary-900: 30 58 138;
+    --color-primary-950: 23 37 84;
+
+    --color-secondary-50: 253 244 255;
+    --color-secondary-100: 250 232 255;
+    --color-secondary-200: 245 208 254;
+    --color-secondary-300: 240 171 252;
+    --color-secondary-400: 232 121 249;
+    --color-secondary-500: 217 70 239;
+    --color-secondary-600: 192 38 211;
+    --color-secondary-700: 162 28 175;
+    --color-secondary-800: 134 25 143;
+    --color-secondary-900: 112 26 117;
+    --color-secondary-950: 74 4 78;
+
+    --spacing-section: 5rem;
+    --spacing-section-sm: 3rem;
+    --spacing-container: 1.5rem;
+
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  * {
+    @apply border-neutral-200;
+  }
+
+  html {
+    @apply antialiased;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-neutral-50 text-neutral-900;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+
+  /* Typography base styles */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl lg:text-3xl;
+  }
+
+  h5 {
+    @apply text-lg md:text-xl lg:text-2xl;
+  }
+
+  h6 {
+    @apply text-base md:text-lg lg:text-xl;
+  }
+
+  p {
+    @apply text-base leading-relaxed;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  /* Container system with responsive padding */
+  .container-responsive {
+    @apply mx-auto w-full;
+    @apply px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16;
+  }
+
+  .container-narrow {
+    @apply container-responsive max-w-4xl;
+  }
+
+  .container-medium {
+    @apply container-responsive max-w-6xl;
+  }
+
+  .container-wide {
+    @apply container-responsive max-w-7xl;
+  }
+
+  /* Section spacing system */
+  .section {
+    @apply py-12 sm:py-16 md:py-20 lg:py-24;
+  }
+
+  .section-sm {
+    @apply py-8 sm:py-10 md:py-12 lg:py-16;
+  }
+
+  .section-lg {
+    @apply py-16 sm:py-20 md:py-24 lg:py-32;
+  }
+
+  /* Card component base */
+  .card {
+    @apply rounded-xl bg-white shadow-md transition-shadow duration-200;
+  }
+
+  .card-hover {
+    @apply card hover:shadow-lg;
+  }
+
+  /* Button reset */
+  .btn-reset {
+    @apply inline-flex items-center justify-center;
+    @apply border-0 bg-transparent p-0;
+    @apply cursor-pointer outline-none;
+    @apply transition-all duration-200;
+  }
+
+  /* Focus visible styles */
+  .focus-ring {
+    @apply outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2;
+  }
+
+  /* Gradient overlays */
+  .gradient-primary {
+    @apply bg-gradient-to-br from-primary-500 to-primary-700;
+  }
+
+  .gradient-secondary {
+    @apply bg-gradient-to-br from-secondary-500 to-secondary-700;
+  }
+
+  /* Text gradients */
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-secondary {
+    @apply bg-gradient-to-r from-secondary-600 to-secondary-800 bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  /* Responsive text utilities */
+  .text-responsive-xs {
+    @apply text-xs sm:text-sm md:text-base;
+  }
+
+  .text-responsive-sm {
+    @apply text-sm sm:text-base md:text-lg;
+  }
+
+  .text-responsive-base {
+    @apply text-base sm:text-lg md:text-xl;
+  }
+
+  .text-responsive-lg {
+    @apply text-lg sm:text-xl md:text-2xl;
+  }
+
+  .text-responsive-xl {
+    @apply text-xl sm:text-2xl md:text-3xl;
+  }
+
+  /* Aspect ratio utilities */
+  .aspect-video {
+    aspect-ratio: 16 / 9;
+  }
+
+  .aspect-square {
+    aspect-ratio: 1 / 1;
+  }
+
+  .aspect-portrait {
+    aspect-ratio: 3 / 4;
+  }
+
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn var(--transition-base) ease-in;
+  }
+
+  .animate-slide-up {
+    animation: slideUp var(--transition-base) ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn var(--transition-fast) ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  /* Accessibility utilities */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .not-sr-only {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    @apply bg-white text-black;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}
