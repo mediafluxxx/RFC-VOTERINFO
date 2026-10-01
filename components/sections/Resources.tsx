@@ -72,7 +72,7 @@ export const Resources: React.FC = () => {
             Ready to Make Your Voice Heard?
           </h3>
           <p className="text-lg md:text-xl text-primary-50 mb-6 max-w-2xl mx-auto">
-            Make sure you're registered and know your polling location before April 21, 2026
+            Make sure you&apos;re registered and know your polling location before April 21, 2026
           </p>
           <Button
             variant="secondary"

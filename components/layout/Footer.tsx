@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
           <div>
             <h3 className="text-xl font-bold mb-4 text-white">Richmond First</h3>
             <p className="text-neutral-400 text-sm leading-relaxed">
-              Empowering voters with clear, accessible information about Virginia's
+              Empowering voters with clear, accessible information about Virginia&apos;s
               redistricting amendment.
             </p>
           </div>

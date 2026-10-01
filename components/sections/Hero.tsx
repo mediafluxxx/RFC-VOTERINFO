@@ -21,7 +21,7 @@ export const Hero: React.FC = () => {
         <div className="section-lg text-center">
           <div className="max-w-4xl mx-auto space-y-6 md:space-y-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight animate-fade-in">
-              Virginia's Redistricting Amendment
+              Virginia&apos;s Redistricting Amendment
             </h1>
 
             <p className="text-xl md:text-2xl lg:text-3xl text-primary-100 animate-slide-up">
@@ -29,7 +29,7 @@ export const Hero: React.FC = () => {
             </p>
 
             <p className="text-base md:text-lg lg:text-xl text-primary-50 max-w-3xl mx-auto leading-relaxed animate-fade-in">
-              Get informed about Virginia's redistricting amendment and understand what's
+              Get informed about Virginia&apos;s redistricting amendment and understand what&apos;s
               at stake for our community. Your vote matters.
             </p>
 

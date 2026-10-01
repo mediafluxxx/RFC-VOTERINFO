@@ -31,7 +31,7 @@ export const Overview: React.FC = () => {
             Understanding the Amendment
           </h2>
           <p className="text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto">
-            Here's what you need to know about Virginia's redistricting amendment
+            Here&apos;s what you need to know about Virginia&apos;s redistricting amendment
           </p>
         </div>
 

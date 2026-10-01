@@ -21,7 +21,7 @@ export const Details: React.FC = () => {
                 Current Process
               </h3>
               <p className="text-neutral-700 leading-relaxed">
-                Currently, Virginia's General Assembly is responsible for drawing district
+                Currently, Virginia&apos;s General Assembly is responsible for drawing district
                 lines. This process has been subject to various legal challenges and
                 concerns about fairness and representation.
               </p>
