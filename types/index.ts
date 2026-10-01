@@ -19,7 +19,7 @@ export interface IService<T> {
 }
 
 // Voter Information Types
-export interface VoterGuideContent {
+export interface VoterGuideContent extends IModel {
   title: string;
   description: string;
   sections: VoterGuideSection[];

@@ -42,8 +42,8 @@ export function getCurrentBreakpoint(): Breakpoint {
 /**
  * Generate responsive class variants
  */
-export function responsive<T extends string>(
-  baseClass: T,
+export function responsive(
+  baseClass: string,
   variants: Partial<Record<Breakpoint, string>>
 ): string {
   const classes = [baseClass];
